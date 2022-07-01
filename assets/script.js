@@ -9,7 +9,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
  var passwordLength = window.prompt(`Please enter a number 8-128, this will be your password length`);
  if (7 < Number(passwordLength) && Number(passwordLength) < 128) {
-console.log(passwordLength)
+return(passwordLength);
  } else {
   generatePassword();
  }
