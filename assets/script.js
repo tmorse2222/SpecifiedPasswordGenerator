@@ -7,6 +7,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Function generatePassword
 function generatePassword() {
+  window.prompt(`Please select password length`);
   
 }
 
