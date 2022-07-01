@@ -8,8 +8,13 @@ var generateBtn = document.querySelector("#generate");
 // Function generatePassword
 function generatePassword() {
  var passwordLength = window.prompt(`Please enter a number 8-128, this will be your password length`);
-
+ if (7 < Number(passwordLength) && Number(passwordLength) < 128) {
+console.log(passwordLength)
+ } else {
+  generatePassword();
+ }
 }
+
 
 // Write password to the #password input
 function writePassword() {
