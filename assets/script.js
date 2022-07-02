@@ -11,7 +11,7 @@ var generateBtn = document.querySelector("#generate");
 // Function generatePassword
 function generatePassword() {
  var passwordLength = window.prompt(`Please enter a number 8-128, this will be your password length`);
- if (7 < Number(passwordLength) && Number(passwordLength) < 128) {
+ if (7 < Number(passwordLength) && Number(passwordLength) < 129) {
   var passwordCase = window.confirm(`Your password will contain : ${passwordLength} characters\n
   Please select "ok" if you would like to include both upper and lower case characters in your password. If you would like to use lower case only, please select cancel.`)
   if (passwordCase == true) {
@@ -192,7 +192,7 @@ function generatePassword() {
             }
     
             return result;
-            
+
           } else {
             window.confirm(`Password generator cancelled, Select "Generate Password" button to start over`)
           }
@@ -201,7 +201,9 @@ function generatePassword() {
         }
   
     }
-  } 
+  } else {
+    window.prompt(`That integer is not between the specified values, please select the "Generate Password" button and enter a corrisponding value between 8 and 128`)
+  }
  }
 
 
