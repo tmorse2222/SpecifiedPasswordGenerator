@@ -27,7 +27,8 @@ function generatePassword() {
         Your password will contain : ${passwordLength} characters\n
         To confirm, please select "ok", to start over, please select "cancel"`)
         if (passwordConfirm = true){
-          return passwordLength;
+          var characters = `${lower}${upper}${numbers}${symbols}`
+          console.log(characters)
         }
       }
     }
