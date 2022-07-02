@@ -1,6 +1,9 @@
 
 // Assignment code here
-
+const lower = `abcdefghijklmnopqrstuvwxyz`;
+const upper = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
+const numbers = `0123456789`;
+const symbols = `!@#$%^&*_-+=`;
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
