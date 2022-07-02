@@ -22,12 +22,12 @@ function generatePassword() {
       var passwordSpecial = window.confirm(`You have selected to include numbers, Upper case, and Lower case characters in your password\n
       Your password will contain : ${passwordLength} characters\n
       Please select "ok" if you would like to include special characters, such as !, @, #, if not please select cancel`)
-      if (passwordSpecial = true) {
+      if (passwordSpecial == true) {
         var passwordConfirm = window.confirm(`You have selected a password that will contain special characters, numbers, upper, and lower case characters\n
         Your password will contain : ${passwordLength} characters\n
         To confirm, please select "ok", to start over, please select "cancel"`)
 
-        if (passwordConfirm == true){
+        if (passwordConfirm == true) {
 
           var characters = `${lower}${upper}${numbers}${symbols}`
           var result = ``
@@ -39,9 +39,25 @@ function generatePassword() {
           return result;
 
         } else {
-         window.confirm(`Password generator cancelled, Select button to start over`)
+         window.confirm(`Password generator cancelled, Select "Generate Password" button to start over`)
         }
 
+      } else {
+        var passwordConfirm = window.confirm(`You have selected a password that will not contain special characters, but will contain numbers, upper, and lower case characters\n
+        Your password will contain : ${passwordLength} characters\n
+        To confirm, please select "ok", to start over, please select "cancel"`)
+
+        if (passwordConfirm == true) {
+          var characters = `${lower}${upper}${numbers}`
+          var result = ``
+          for ( var i = 0; i < passwordLength; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * 63));
+          }
+  
+          return result;
+        } else {
+          window.confirm(`Password generator cancelled, Select "Generate Password" button to start over`)
+        }
       }
 
       }
