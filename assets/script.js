@@ -18,7 +18,7 @@ function generatePassword() {
     var passwordNumber = window.confirm(`You have selected both Upper and Lower case characters\n
     Your password will contain : ${passwordLength} characters\n
     Please select "ok" if you would like to include numbers in your password, please select cancel if you would like no numbers`)
-    if (passwordNumber = true) {
+    if (passwordNumber == true) {
       var passwordSpecial = window.confirm(`You have selected to include numbers, Upper case, and Lower case characters in your password\n
       Your password will contain : ${passwordLength} characters\n
       Please select "ok" if you would like to include special characters, such as !, @, #, if not please select cancel`)
@@ -60,7 +60,51 @@ function generatePassword() {
         }
       }
 
+      } else {
+        var passwordSpecial = window.confirm(`You have selected a password that will not contain numbers, but will contain upper, and lower case characters\n
+        Your password will contain : ${passwordLength} characters\n
+      Please select "ok" if you would like to include special characters, such as !, @, #, if not please select cancel`)
+
+      if (passwordSpecial == true) {
+        var passwordConfirm = window.confirm(`You have selected a password that will not contain numbers, but will contain special characters, upper, and lower case characters\n
+        Your password will contain : ${passwordLength} characters\n
+        To confirm, please select "ok", to start over, please select "cancel"`)
+
+        if (passwordConfirm == true) {
+
+          var characters = `${lower}${upper}${symbols}`
+          var result = ``
+          
+          for ( var i = 0; i < passwordLength; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * 65));
+          }
+
+          return result;
+
+        } else {
+         window.confirm(`Password generator cancelled, Select "Generate Password" button to start over`)
+        }
+
+      } else {
+        var passwordConfirm = window.confirm(`You have selected a password that will not contain special characters or numbers, but will contain upper and lower case characters\n
+        Your password will contain : ${passwordLength} characters\n
+        To confirm, please select "ok", to start over, please select "cancel"`)
+
+        if (passwordConfirm == true) {
+          var characters = `${lower}${upper}`
+          var result = ``
+          for ( var i = 0; i < passwordLength; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * 53));
+          }
+  
+          return result;
+        } else {
+          window.confirm(`Password generator cancelled, Select "Generate Password" button to start over`)
+        }
       }
+
+      }
+      
     }
   } 
  }
