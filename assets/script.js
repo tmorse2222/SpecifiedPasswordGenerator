@@ -202,7 +202,7 @@ function generatePassword() {
   
     }
   } else {
-    window.prompt(`That integer is not between the specified values, please select the "Generate Password" button and enter a corrisponding value between 8 and 128`)
+    window.prompt(`That integer is not between the specified values, please select the "Generate Password" button and enter a corresponding value between 8 and 128`)
   }
  }
 
