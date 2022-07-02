@@ -16,7 +16,12 @@ function generatePassword() {
     You have selected a password length of : ${passwordLength}\n
     Please select "ok" if you would like to include numbers in your password, please select cancel if you would like no numbers`)
     if (passwordNumber = true) {
-      return passwordLength;
+      var passwordSpecial = window.confirm(`You have selected to include numbers, Upper case, and Lower case characters in your password\n
+      You have selected a password length of : ${passwordLength}\n
+      Please select "ok" if you would like to include special characters, such as !, @, #, if not please select cancel`)
+      if (passwordSpecial = true) {
+        return passwordLength;
+      }
     }
   } else {
 
