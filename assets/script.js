@@ -27,9 +27,9 @@ function generatePassword() {
         Your password will contain : ${passwordLength} characters\n
         To confirm, please select "ok", to start over, please select "cancel"`)
 
-        if (passwordConfirm = true){
+        if (passwordConfirm == true){
 
-          var characters = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*_-+=`
+          var characters = `${lower}${upper}${numbers}${symbols}`
           var result = ``
           
           for ( var i = 0; i < passwordLength; i++ ) {
@@ -38,17 +38,17 @@ function generatePassword() {
 
           return result;
 
+        } else {
+         window.confirm(`Password generator cancelled, Select button to start over`)
         }
-        
+
+      }
+
       }
     }
-  } else {
-
-  }
- } else {
-  generatePassword();
+  } 
  }
-}
+
 
 
 // Write password to the #password input
