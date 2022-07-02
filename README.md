@@ -28,4 +28,4 @@ THEN the password is either displayed in an alert or written to the page<br>
 <br>
 This challenge is utilizes JavaScript basics to take an existing code and create a working password generator. Although only trivial changes were made to sourcing in our HTML and CSS documents, our JS script is heavily modified and the main feature of this project.
 <img src="assets/images/screenshot.png" alt="A screenshot of the deployed application">
-A link to the deployed application can be found <a href="https://tmorse2222.github.io/SpecifiedPasswordGenerator/" target="blank">here</a>
+A link to the deployed application can be found <a href="https://tmorse2222.github.io/SpecifiedPasswordGenerator/">here</a>
