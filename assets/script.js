@@ -12,7 +12,12 @@ function generatePassword() {
   var passwordCase = window.confirm(`You have selected a password lenght of : ${passwordLength}\n
   Please select "ok" if you would like to include both upper and lower case characters in your password. If you would like to use lower case only, please select cancel.`)
   if (passwordCase = true) {
-    console.log(passwordLength);
+    var passwordNumber = window.confirm(`You have selected both Upper and Lower case characters\n
+    You have selected a password length of : ${passwordLength}\n
+    Please select "ok" if you would like to include numbers in your password, please select cancel if you would like no numbers`)
+    if (passwordNumber = true) {
+      return passwordLength;
+    }
   } else {
 
   }
