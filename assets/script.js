@@ -1,9 +1,9 @@
 
 // Assignment code here
-const lower = `abcdefghijklmnopqrstuvwxyz`;
-const upper = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
-const numbers = `0123456789`;
-const symbols = `!@#$%^&*_-+=`;
+var lower = `abcdefghijklmnopqrstuvwxyz`;
+var upper = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
+var numbers = `0123456789`;
+var symbols = `!@#$%^&*_-+=`;
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -26,10 +26,20 @@ function generatePassword() {
         var passwordConfirm = window.confirm(`You have selected a password that will contain special characters, numbers, upper, and lower case characters\n
         Your password will contain : ${passwordLength} characters\n
         To confirm, please select "ok", to start over, please select "cancel"`)
+
         if (passwordConfirm = true){
-          var characters = `${lower}${upper}${numbers}${symbols}`
-          console.log(characters)
+
+          var characters = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*_-+=`
+          var result = ``
+          
+          for ( var i = 0; i < passwordLength; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * 75));
+          }
+
+          return result;
+
         }
+        
       }
     }
   } else {
