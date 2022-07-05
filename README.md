@@ -1,7 +1,7 @@
 Tyler Morse<br>
 Challenge 3: Password Generator<br>
 Start Date: 07/01/22<br>
-Most Recent Edit: 07/01/22<br>
+Most Recent Edit: 07/05/22<br>
 
 <br>
 User Story:<br>
@@ -26,6 +26,6 @@ THEN a password is generated that matches the selected criteria<br>
 WHEN the password is generated<br>
 THEN the password is either displayed in an alert or written to the page<br>
 <br>
-This challenge is utilizes JavaScript basics to take an existing code and create a working password generator. Although only trivial changes were made to sourcing in our HTML and CSS documents, our JS script is heavily modified and the main feature of this project.
+This challenge utilizes JavaScript basics to take an existing code and create a working password generator. Although only trivial changes were made to sourcing in our HTML and CSS documents, our JS script is heavily modified and the main feature of this project.
 <img src="assets/images/screenshot.png" alt="A screenshot of the deployed application">
 A link to the deployed application can be found <a href="https://tmorse2222.github.io/SpecifiedPasswordGenerator/">here</a>
