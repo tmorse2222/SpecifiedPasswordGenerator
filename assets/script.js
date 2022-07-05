@@ -354,7 +354,7 @@ function generatePassword() {
 
     var passwordUpCase = window.confirm(`Your password will not contain lower cased characters\n
     Your password will contain : ${passwordLength} characters\n
-    Please select "ok" if you would like to include both upper case characters in your password. If not, please select cancel.`)
+    Please select "ok" if you would like to include upper case characters in your password. If not, please select cancel.`)
    
     // If statement for charachter selection
   
